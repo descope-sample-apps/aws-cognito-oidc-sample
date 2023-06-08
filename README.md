@@ -25,3 +25,5 @@ You can install all of the necessary packages by running `yarn install`
 Run the program using:
 
 `yarn start`
+
+If you need the flow, to work with OIDC and Passkeys, it is the `oidc-flow.json` file in the root of this directory. This can be downloaded and imported via the [Descope Console](https://app.descope.com/flows).
