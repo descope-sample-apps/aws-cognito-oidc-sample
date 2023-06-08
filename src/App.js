@@ -22,19 +22,13 @@ Amplify.configure({
     authenticationFlowType: "USER_PASSWORD_AUTH",
 
     // OPTIONAL - Hosted UI configuration
-    // oauth: {
-    //   domain: `${process.env.REACT_APP_COGNITO_DOMAIN}.auth.us-west-2.amazoncognito.com`,
-    //   scope: [
-    //     "awesomeapi-resource-server/awesomeapi.read",
-    //     "openid",
-    //     "email",
-    //     "phone",
-    //     "profile",
-    //   ],
-    //   redirectSignIn: "http://localhost:3000/dashboard",
-    //   redirectSignOut: "http://localhost:3000/",
-    //   responseType: "code", // or 'token', note that REFRESH token will only be generated when the responseType is code
-    // },
+    oauth: {
+      domain: `${process.env.REACT_APP_COGNITO_DOMAIN}.auth.us-west-2.amazoncognito.com`,
+      scope: ["openid", "email", "phone", "profile"],
+      redirectSignIn: "https://main.d1rua11q42kscj.amplifyapp.com/dashboard",
+      redirectSignOut: "https://main.d1rua11q42kscj.amplifyapp.com/",
+      responseType: "code", // or 'token', note that REFRESH token will only be generated when the responseType is code
+    },
   },
 });
 
