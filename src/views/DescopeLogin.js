@@ -1,13 +1,18 @@
 import { Descope } from "@descope/react-sdk";
+import "./DescopeLogin.css";
 
 export const DescopeLogin = () => {
   return (
-    <Descope
-      flowId="sign-up-or-in"
-      onSuccess={(e) => console.log(e.detail.user)}
-      onError={(e) => console.log("Could not log in!")}
-      theme="light"
-    />
+    <div className="main-container-login">
+      <div className="login-container">
+        <Descope
+          flowId="sign-up-or-in"
+          onSuccess={(e) => console.log("Logged in!")}
+          onError={(e) => console.log("Could not log in!")}
+          theme="light"
+        />
+      </div>
+    </div>
   );
 };
 
