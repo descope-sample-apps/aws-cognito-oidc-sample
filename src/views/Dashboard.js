@@ -33,7 +33,7 @@ function Dashboard(props) {
       Authorization: accessToken,
     };
     const apiResp = await axios.get(
-      `https://hkbcq1nsnh.execute-api.us-west-2.amazonaws.com/Stage/oidc-get`,
+      `https://hkbcq1nsnh.execute-api.us-west-2.amazonaws.com/oidc-get`,
       { headers }
     );
     setApiResponse(JSON.stringify(apiResp.data));
