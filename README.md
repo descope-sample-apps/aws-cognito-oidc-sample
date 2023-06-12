@@ -16,7 +16,7 @@ REACT_APP_USERPOOL_WEB_CLIENT_ID=<user pool client ID>
 REACT_APP_AWS_REGION=<region>
 REACT_APP_COGNITO_HOSTED_UI=<url of hosted UI>
 REACT_APP_COGNITO_DOMAIN=<cognito domain>
-DESCOPE_PROJECT_ID=<Descope Project ID from Descope Console>
+REACT_APP_DESCOPE_PROJECT_ID=<Descope Project ID from Descope Console>
 ```
 
 > **Note**: This app uses the AWS Hosted UI, so it can be easily re-configured. The app would operately similarly however if a custom login page was used instead.
