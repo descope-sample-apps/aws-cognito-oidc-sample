@@ -4,7 +4,7 @@
 
 This is a very simple react app to demonstrate how to implement Descope as an OIDC provider with Cognito by using AWS Amplify.
 
-If you would like to see a demo of the app hosted with AWS Amplify, this app is also hosted [here](main.d1rua11q42kscj.amplifyapp.com/)
+If you would like to see a demo of the app hosted with AWS Amplify, this app is also hosted [here](main.d1rua11q42kscj.amplifyapp.com/).
 
 > **Note**: If you need the flow, to work with OIDC and Passkeys, it is the `oidc-flow.json` file in the root of this directory. This can be downloaded and imported via the [Descope Console](https://app.descope.com/flows).
 
