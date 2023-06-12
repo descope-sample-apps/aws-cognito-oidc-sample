@@ -11,7 +11,7 @@ import { AuthProvider } from "@descope/react-sdk";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthProvider projectId={process.env.DESCOPE_PROJECT_ID}>
+  <AuthProvider projectId={process.env.REACT_APP_DESCOPE_PROJECT_ID}>
     <BrowserRouter>
       <React.StrictMode>
         <Routes>
