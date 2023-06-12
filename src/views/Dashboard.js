@@ -28,9 +28,9 @@ function Dashboard(props) {
 
   async function handleCallProtectedMethod(event) {
     event.preventDefault();
-    const accessToken = user["signInUserSession"]["idToken"]["jwtToken"];
+    const accessToken = user["signInUserSession"]["accessToken"]["jwtToken"];
     const headers = {
-      Authorization: accessToken,
+      Authorization: "Bearer " + accessToken,
     };
     const apiResp = await axios.get(
       `https://hkbcq1nsnh.execute-api.us-west-2.amazonaws.com/Stage/oidc-get`,
