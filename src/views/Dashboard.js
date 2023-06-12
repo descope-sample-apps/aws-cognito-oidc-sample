@@ -72,8 +72,14 @@ function Dashboard(props) {
           Call API
         </button>
         <div className="api-response-box">
-          <h2>API Response:</h2>
-          <p>{apiResponse}</p>
+          {state.showResult && (
+            <div className="result-block" data-testid="api-result">
+              <h6 className="muted">Result</h6>
+              <Highlight>
+                <span>{apiResponse}</span>
+              </Highlight>
+            </div>
+          )}
         </div>
       </div>
     </div>
