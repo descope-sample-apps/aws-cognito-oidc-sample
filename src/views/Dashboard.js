@@ -3,10 +3,11 @@ import "../App.css";
 import { Auth } from "aws-amplify";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
-import "./Dashboard.css";
+
 
 import JSONPretty from "react-json-pretty";
 import "react-json-pretty/themes/monikai.css";
+
 
 function Dashboard(props) {
   const [user, setUser] = useState();
@@ -58,27 +59,28 @@ function Dashboard(props) {
   }
 
   return (
-    <div className="api-homepage">
+    <>
       <div className="navbar">
-        <h2>Sample App</h2>
-        <button className="signout-button" onClick={handleSignOut}>
+        <h2 className="sample-logo blue">Sample App</h2>
+        <button className="login-btn logout-btn" onClick={handleSignOut}>
           Sign Out
         </button>
       </div>
-      <div className="content">
-        <h1>You can test the AWS API Gateway Here.</h1>
-        <p>
+
+      <div className="home">
+        <h1 className="dash-title">You can test the AWS API Gateway Here</h1>
+        <p className="dash-tag">
           Press this button to make a GET HTTP request to the OIDC-Test endpoint
           configured with our AWS API Gateway
         </p>
         <button className="api-button" onClick={handleCallProtectedMethod}>
           Call API
         </button>
+        <div className="api-response-box">
+          <JSONPretty id="json-pretty" data={apiResponse}></JSONPretty>
+        </div>
       </div>
-      <div className="api-response-box">
-        <JSONPretty id="json-pretty" data={apiResponse}></JSONPretty>
-      </div>
-    </div>
+    </>
   );
 }
 
