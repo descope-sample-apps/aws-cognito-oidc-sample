@@ -10,6 +10,7 @@ html, body {
 }
 h1, h2, p {
   max-width: 90vw;
+  font-size: 1.2vw;
 }
 
 
@@ -30,7 +31,7 @@ h1, h2, p {
 .title {
   font-weight: 500;
   margin-top: 0;
-  font-size: 4em;
+  font-size: 4.5vw;
   width: 70vw;
 }
 .powered {
@@ -42,6 +43,7 @@ h1, h2, p {
   background-color: #e5f2ff;
   padding: 20px 40px;
   border-radius: 8px;
+  font-size: 1.23vw;
 }
 .blue-dot {
   width: 10px;
@@ -57,7 +59,7 @@ h1, h2, p {
   border: none;
   padding: 15px 35px;
   padding-right: 30px;
-  font-size: 1.15em;
+  font-size: 1.3vw;
   color: aliceblue;
   border-radius: 8px;
 }
@@ -71,7 +73,7 @@ h1, h2, p {
 
 /* ====== Dashboard ====== */
 .dash-title {
-  font-size: 2.2em;
+  font-size: 2.4vw;
   font-weight: 500;
 }
 .logout-btn {
@@ -83,7 +85,7 @@ h1, h2, p {
   background-color: #e5f2ff;
   color: #167ae4;
   padding: 2vh 5vh;
-  font-size: 1.1em;
+  font-size: 1.2vw;
   border-radius: 8px;
   margin-top: 3vh;
 }
@@ -95,6 +97,7 @@ h1, h2, p {
   margin-top: 5vh;
   width: 90vw;
   text-align: left;
+  font-size: 1vw;
 }
 
 
@@ -110,11 +113,12 @@ h1, h2, p {
 }
 .navbar h2 {
   margin: 0;
+  font-size: 1.9vw;
 }
 .login-btn {
   border: none;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.1vw;
   font-family: 'Golos Text', sans-serif;
   background-color: #e5f2ff;
   padding: 12px 4vh;
@@ -133,5 +137,29 @@ h1, h2, p {
   }
   .navbar {
     padding: 4vh 3vh;
+  }
+  .navbar h2 {
+    font-size: 1.7em;
+  }
+  .login-btn {
+    font-size: 1em;
+  }
+  .api-response-box {
+    font-size: 1em;
+  }
+  .api-button {
+    font-size: 1.1em;
+  }
+  .dashboard-btn {
+    font-size: 1.3em;
+  }
+  .powered {
+    font-size: 1.2em;
+  }
+  .dash-title {
+    font-size: 2.2em;
+  }
+  h1, h2, p {
+    font-size: 1.2em;
   }
 }

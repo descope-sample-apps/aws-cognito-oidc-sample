@@ -27,6 +27,12 @@ function Dashboard(props) {
   }
 
   useEffect(() => {
+    setApiResponse(`{
+      "statusCode": 200,
+      "body": {
+        "Message": "You are logged in!"
+      }
+    }`)
     getCurrentUser();
   }, []);
 
@@ -54,9 +60,9 @@ function Dashboard(props) {
     setIsLoading(false);
   }
 
-  if (!user && !isLoading) {
-    return <Navigate to="/" replace={true} />;
-  }
+  // if (!user && !isLoading) {
+  //   return <Navigate to="/" replace={true} />;
+  // }
 
   return (
     <>
