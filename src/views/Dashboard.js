@@ -5,6 +5,9 @@ import { Navigate } from "react-router-dom";
 import axios from "axios";
 import "./Dashboard.css";
 
+import JSONPretty from "react-json-pretty";
+import "react-json-pretty/themes/monikai.css";
+
 function Dashboard(props) {
   const [user, setUser] = useState();
   const [apiResponse, setApiResponse] = useState("");
@@ -36,7 +39,7 @@ function Dashboard(props) {
       `https://hkbcq1nsnh.execute-api.us-west-2.amazonaws.com/Stage/oidc-get`,
       { headers }
     );
-    setApiResponse(JSON.stringify(apiResp.data, null, 2));
+    setApiResponse(JSON.stringify(apiResp.data));
   }
 
   async function handleSignOut(event) {
@@ -71,11 +74,9 @@ function Dashboard(props) {
         <button className="api-button" onClick={handleCallProtectedMethod}>
           Call API
         </button>
-        <div className="api-response-box">
-          <pre style={{ background: "black", color: "white", padding: "10px" }}>
-            {apiResponse}
-          </pre>
-        </div>
+      </div>
+      <div className="api-response-box">
+        <JSONPretty id="json-pretty" data={apiResponse}></JSONPretty>
       </div>
     </div>
   );
