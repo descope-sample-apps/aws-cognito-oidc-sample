@@ -36,7 +36,7 @@ function Dashboard(props) {
       `https://hkbcq1nsnh.execute-api.us-west-2.amazonaws.com/Stage/oidc-get`,
       { headers }
     );
-    setApiResponse(JSON.stringify(apiResp.data));
+    setApiResponse(JSON.stringify(apiResp.data, null, 2));
   }
 
   async function handleSignOut(event) {
@@ -72,14 +72,9 @@ function Dashboard(props) {
           Call API
         </button>
         <div className="api-response-box">
-          {state.showResult && (
-            <div className="result-block" data-testid="api-result">
-              <h6 className="muted">Result</h6>
-              <Highlight>
-                <span>{apiResponse}</span>
-              </Highlight>
-            </div>
-          )}
+          <pre style={{ background: "black", color: "white", padding: "10px" }}>
+            {apiResponse}
+          </pre>
         </div>
       </div>
     </div>
