@@ -1,8 +1,7 @@
 import "./App.css";
 import Amplify from "aws-amplify";
-
 import React from "react";
-import "./views/HomePage.css";
+
 
 Amplify.configure({
   Auth: {
@@ -34,11 +33,11 @@ Amplify.configure({
 
 function App(props) {
   return (
-    <div className="homepage">
+    <>
       <div className="navbar">
-        <h2>Sample App</h2>
+        <h2 className="sample-logo blue">Sample App</h2>
         <button
-          className="login-button"
+          className="login-btn"
           onClick={(e) => {
             e.preventDefault();
             window.location.href = process.env.REACT_APP_COGNITO_HOSTED_UI;
@@ -47,13 +46,21 @@ function App(props) {
           Login
         </button>
       </div>
-      <div className="content">
-        <h1>
-          Cognito Sample App with Hosted UI and Descope as an OIDC Provider
-        </h1>
-        <p>Please sign in with button in the top right corner.</p>
+      
+      <div className="home">
+        <h1 className="title"><span className="blue">Cognito Sample App</span> with Hosted UI and <span className="blue">Descope as an OIDC Provider</span></h1>
+        <p className="powered"><div className="blue-dot"></div>Powered by Descope</p>
+        <button
+          className="dashboard-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = process.env.REACT_APP_COGNITO_HOSTED_UI;
+          }}
+        >
+          Dashboard &nbsp;<span className="arrow">→</span>
+        </button>
       </div>
-    </div>
+    </>
   );
 }
 

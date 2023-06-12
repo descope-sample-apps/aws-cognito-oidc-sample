@@ -1,5 +1,5 @@
 import { Descope } from "@descope/react-sdk";
-import "./DescopeLogin.css";
+
 
 export const DescopeLogin = () => {
   return (
