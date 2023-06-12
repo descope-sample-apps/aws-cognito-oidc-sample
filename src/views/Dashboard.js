@@ -28,7 +28,7 @@ function Dashboard(props) {
 
   async function handleCallProtectedMethod(event) {
     event.preventDefault();
-    const accessToken = user["signInUserSession"]["accessToken"]["jwtToken"];
+    const accessToken = user["signInUserSession"]["idToken"]["jwtToken"];
     const headers = {
       Authorization: accessToken,
     };
